@@ -1,0 +1,107 @@
+.text-padrao{
+    font-family: cursive !important;
+    color: black ;
+}
+
+.text-padrao-titulo{
+    font-family: cursive !important;
+    color: black ;
+    font-size: 45px;
+}
+
+.text-truncate-2 {
+  display: -webkit-box !important;
+  line-clamp: 2 !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.text-forms{
+    font-family: cursive;
+    color: rgb(255, 36, 255) !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 40px;
+    margin-top: 30px;    
+
+}
+
+.nav-text:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+.text-generico{
+    color: rgb(255, 36, 255) !important;
+}
+
+.nav-text{
+    font-family: cursive !important;
+    color: black ;
+}
+
+.bg-nav{
+    background-color: rgb(255, 94, 233);
+}
+
+
+.bg-padrao{
+    background-color: rgb(255, 171, 185);
+    background-repeat: no-repeat;
+}
+
+.bg-caixa-definido{
+    background-color: purple;
+    font-family: cursive;
+    color: black !important;
+
+}
+
+.bg-pink{
+    background-color: rgb(177, 0, 177);
+}
+
+/* .bg-pink:hover{
+    background-color: rgb(211, 1, 211);
+    transition: 0.5s;
+} */
+
+.bg-input{
+    color: rgb(255, 206, 214)  !important;
+}
+
+.btn-color{
+    color: purple;
+    font-weight: bold;
+    border: 100%;
+    border-color: purple;
+    font-family: cursive;
+    
+}
+
+.btn-color:hover{
+    color: rgb(255, 29, 255);
+    background-color: rgb(165, 27, 165);
+    font-weight: bold;
+    border: 100%;
+    border-color: rgb(211, 1, 211);
+    font-family: cursive;
+}
+
+.link-destaque{
+    color: blueviolet;
+}
+
+.link-destaque:hover{
+    color: rgb(231, 99, 231);
+}
+
+.alert-pink{
+    background-color: rgb(247, 194, 203);
+}
+
+
+/* .table-color{
+    background-color: rgb(247, 194, 203) !important;
+} */
