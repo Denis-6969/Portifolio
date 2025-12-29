@@ -1,0 +1,416 @@
+/* ========================================
+   PALETA / GLOBAL
+======================================== */
+:root {
+    --blue: #0057ff;
+    --yellow: #ffce1f;
+    --white: #ffffff;
+    --bg: #f4f7ff;
+    --radius: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: #000;
+    min-height: 100vh;
+}
+
+/* ========================================
+   🔵 CSS DO INDEX (NAVBAR, LOGIN, FEED)
+======================================== */
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: var(--blue);
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0; /* sem arredondamento inferior */
+}
+
+.navbar .brand img {
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+}
+
+.btn-login {
+    background: var(--yellow);
+    color: black;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #e6b800;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* LOGIN BOX */
+.login-box {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* FEED */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.composer {
+    display: flex;
+    background: #e9edff;
+    padding: 12px;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+}
+
+.composer textarea {
+    flex: 1;
+    min-height: 80px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.composer-side {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.post {
+    background: #f4f4f4;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tag {
+    background: var(--yellow);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* BOTÃO GLOBAL */
+.btn {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #0040cc;
+}
+
+/* ========================================
+   🔷 CSS DAS PAGES INTERNAS (PAINEL)
+======================================== */
+
+/* LAYOUT PRINCIPAL */
+.layout {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex: 0 0 230px;
+    background: #001a99;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    min-height: 100vh;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.sidebar .logo {
+    width: 100px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+    background: #0030cc;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+    background: #0040ff;
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: var(--yellow);
+    color: black;
+}
+
+.nav-item .icon {
+    font-size: 18px;
+}
+
+.nav-item .text {
+    font-weight: bold;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.content {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--radius);
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: var(--blue);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* TABELAS */
+.tabela {
+    width: 100%;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background: #e2e4ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.linha.titulo {
+    background: #b9c0ff;
+    font-weight: bold;
+}
+
+/* QUADRO DE UPLOAD */
+.upload-quadro {
+    width: 100%;
+    height: 200px;
+    background: #c3c6ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* PERFIL */
+.perfil-header {
+    background: #d4d7ff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.respostas-box {
+    margin-left: auto;
+    background: #b3b7ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* CARROSSEL */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    margin-bottom: 25px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.carousel-item h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #001a99aa;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #001a99ee;
+}
+
+.backgroundlogin{
+    background-color: #0040ff;
+}
+
+.carousel-btn.left { left: 10px; }
+.carousel-btn.right { right: 10px; }
+
+/* ========================================
+   RESPONSIVIDADE GLOBAL
+======================================== */
+
+/* TABLET */
+@media (max-width: 900px) {
+    .composer { flex-direction: column; }
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; flex-direction: column; background: var(--blue); margin-top: 10px; padding: 10px; border-radius: 10px; }
+    .nav-links.open { display: flex; }
+    .composer-side { flex-direction: column; width: 100%; }
+    .linha { grid-template-columns: 1fr; }
+    .perfil-header { flex-direction: column; text-align: center; }
+    .carousel-container { height: 150px; }
+    .carousel-item { padding: 20px; }
+    .carousel-item h2 { font-size: 18px; }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 400px) {
+    .topbar { font-size: 16px; }
+    .sidebar .logo { width: 80px; }
+    .nav-item { font-size: 14px; padding: 8px; }
+}
